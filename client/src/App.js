@@ -13,13 +13,8 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
-
 const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
+  uri: '/graphql'
 });
 
 function App() {
@@ -47,3 +42,4 @@ function App() {
 }
 
 export default App;
+
